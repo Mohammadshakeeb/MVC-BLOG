@@ -115,7 +115,7 @@
           </button>
         </div>
       </div>
-
+          <?php if(isset($_SESSION['userdata'])){  ?>
       <form method="POST" action="blog" class="row g-3">
         <!-- <div class="col-md-6">
           <label for="inputEmail4" class="form-label">Blog ID</label>
@@ -123,7 +123,7 @@
         </div> -->
         <div class="col-md-6">
           <label for="inputPassword4" class="form-label">Username Name</label>
-          <input type="text" name="name" class="form-control" id="inputPassword4">
+          <input type="text" name="name" value="<?php echo $_SESSION['userdata'][0]; }?>" class="form-control" id="inputPassword4">
         </div>
         <div class="col-12">
           <label for="inputAddress" class="form-label">Blog Title</label>
